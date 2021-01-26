@@ -46,7 +46,7 @@ pipeline {
                  
              
                
-               git branch: 'master', url: 'https://github.com/devops4solutions/CI-example.git'
+               sh "ansible-playbook main.yml -i inventories/dev/hosts --user jenkins --key-file ~/.ssh/id_rsa"
 
                
             
